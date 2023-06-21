@@ -149,7 +149,7 @@ public:
   {
   }
 
-  virtual bool sendTrajectory(const moveit_msgs::RobotTrajectory& trajectory)
+  virtual bool sendTrajectory(const moveit_msgs::RobotTrajectory& trajectory, const ExecutionCompleteCallback& callback)
   {
     if (!controller_action_client_)
       return false;
@@ -259,7 +259,7 @@ public:
   {
   }
 
-  virtual bool sendTrajectory(const moveit_msgs::RobotTrajectory& trajectory)
+  virtual bool sendTrajectory(const moveit_msgs::RobotTrajectory& trajectory, const ExecutionCompleteCallback& callback)
   {
     if (!controller_action_client_)
       return false;
